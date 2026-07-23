@@ -1,0 +1,18 @@
+num = int(input("Enter a number: "))
+original = num
+reverse = 0
+
+n = abs(num)  # Handles negative numbers
+
+while n > 0:
+    digit = n % 10
+    reverse = reverse * 10 + digit
+    n //= 10
+
+if num < 0:
+    reverse = -reverse
+
+if original == reverse:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
