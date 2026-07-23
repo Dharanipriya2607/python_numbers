@@ -1,0 +1,18 @@
+num = int(input("Enter a number: "))
+original = num
+sum = 0
+
+# Number of digits
+n = len(str(abs(num)))
+
+temp = abs(num)
+
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** n
+    temp //= 10
+
+if original >= 0 and sum == original:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
